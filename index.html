@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Ray Games</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <!--Message-->
+    <h1> Play Rock, Paper & Scissors !</h1>
+    <!--User's choice-->
+    <div id="all">
+        <div class="user move">
+            <div id="Rock" class="sign"><img src="Rock.png" alt="This is Rock sign" class="hand usr"></div>
+            <div id="Paper" class="sign"> <img src="paper.png" alt="This is Paper sign" class="hand usr"></div>
+            <div id="Scissors" class="sign"><img src="Scissors.png" alt="This is Scissors sign" class="hand usr"></div>
+            <h2 id="msg">Choose your Move
+            </h2>
+        </div>
+        <!--Computer's choice-->
+        <div class="computer move">
+            <div class="Rock"><img src="Rock.png" alt="This is Rock sign" id="cmpRock" class="hand"></div>
+            <div class="Paper"> <img src="paper.png" alt="This is Paper sign" id="cmpPaper" class="hand"></div>
+            <div class="Scissors"><img src="Scissors.png" alt="This is Scissors sign" id="cmpScissors" class="hand">
+            </div>
+            <h2 id="compMsg">Computer's Move
+            </h2>
+        </div>
+    </div>
+    <!--Score Board-->
+    <h3>
+        <div class="score">
+
+            <div  class="board user">Your Score</div>
+            <div class="board count" id="user">0</div>
+        </div>
+        <div class="number">
+            <div class="board computer">Computer's Score</div>
+            <div class="board count" id="computer">0</div>
+
+        </div>
+    </h3>
+    <script src="game.js"></script>
+</body>
+
+</html>

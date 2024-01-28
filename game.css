@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.hand{
+    height: 150px;
+    width: 150px;
+    object-fit:contain;
+    
+    border:3px solid #333;
+    
+    border-radius: 50%;
+}
+.sign{
+    height: 180px;
+    width: 150px;
+    cursor: pointer;
+}
+.move{
+    display: grid;
+grid-template-columns: repeat(3,1fr);
+
+}
+#all{
+    margin:4rem;
+    display: grid;
+    column-gap: 5rem;
+    grid-template-columns: repeat(2,1fr);
+   
+}
+h2{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.usr:hover{
+    border:7px solid #333;
+
+}
+h3{
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    
+}
+.score,.number{
+display: flex;
+flex-direction: column;
+row-gap: 1.5rem;
+word-spacing: .3rem;
+}
+
+.count{
+    font-size: 2.3rem;
+}
+
+/* Added Classes via JS */
+
+.border{
+    
+    border:7px solid #333;
+}
+.color{
+    color :purple;
+}
+.color2{
+    color : goldenrod;
+}
+
+/*Animation (Running Red & Green Line ) on h1 tag*/
+
+h1{
+    color:maroon;
+    background-color: yellow;
+    height: 5rem;
+    line-height: 5rem;
+    position: relative;
+
+}
+body:hover {
+    h1::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color:red;
+        left: 0;
+        bottom: 20%;
+        border-radius: 7px;
+
+        /*Animation*/
+
+        animation-iteration-count: infinite;
+        animation-name: line;
+        animation-duration: 10S;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes line {
+    from {
+        left: 50%;
+        width: 0%;
+    }
+
+    50% {
+        left: 0;
+        width: 100%;
+    
+    }
+
+    to {
+        left: 50%;
+        width: 0%;
+        background-color: green;
+    }
+}
