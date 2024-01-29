@@ -16,13 +16,13 @@ let countUser = 0, countComp = 0;  //7
 const gameResult = (userWin) => {
     if (userWin) {
         result.innerText = "Congrats! You Won";
-        result.style.backgroundColor = "Green";
+        result.style.backgroundColor = "green";
         let win = document.querySelector("#user");
         win.innerText = ++countUser;
     }
     else {
         result.innerText = "Oops! You lost"
-        result.style.backgroundColor = "Red";
+        result.style.backgroundColor = "red";
         let win = document.querySelector("#computer");
         win.innerText = ++countComp;
     }
