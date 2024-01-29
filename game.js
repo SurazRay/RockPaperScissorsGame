@@ -34,6 +34,7 @@ const compareMove = () => {
     if (move === computer) {
         console.log("Game Draw");
         result.innerText = "Game Draw !";
+        result.style.backgroundColor = "yellow";
     }
     else {
         if (move === "Rock") {
