@@ -9,32 +9,22 @@ let computer, move;  // 1, 3
 var displayId = document.getElementById("cmpRock");  //6
 let result = document.querySelector("h1");  //7
 let userWin = true;  //4, 7
-let countUser = 0, countComp = 0;  //8, 9
-
-//Score Board for User -- 8
-
-const scoreUser = (win) => {
-    win.innerText = ++countUser;
-};
-
-//Score Board for Computer -- 9
-
-const scoreComp = (win) => {
-    win.innerText = ++countComp;
-};
+let countUser = 0, countComp = 0;  //7
 
 //Game Result Out -- 7
 
 const gameResult = (userWin) => {
     if (userWin) {
         result.innerText = "Congrats! You Won";
+        result.style.backgroundColor = "Green";
         let win = document.querySelector("#user");
-        scoreUser(win); //8
+        win.innerText = ++countUser;
     }
     else {
         result.innerText = "Oops! You lost"
+        result.style.backgroundColor = "Red";
         let win = document.querySelector("#computer");
-        scoreComp(win); //9
+        win.innerText = ++countComp;
     }
 };
 
