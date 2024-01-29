@@ -16,13 +16,11 @@ let countUser = 0, countComp = 0;  //7
 const gameResult = (userWin) => {
     if (userWin) {
         result.innerText = "Congrats! You Won";
-        result.style.backgroundColor = "green";
         let win = document.querySelector("#user");
         win.innerText = ++countUser;
     }
     else {
         result.innerText = "Oops! You lost"
-        result.style.backgroundColor = "red";
         let win = document.querySelector("#computer");
         win.innerText = ++countComp;
     }
@@ -34,7 +32,6 @@ const compareMove = () => {
     if (move === computer) {
         console.log("Game Draw");
         result.innerText = "Game Draw !";
-        result.style.backgroundColor = "yellow";
     }
     else {
         if (move === "Rock") {
@@ -46,8 +43,6 @@ const compareMove = () => {
         else {
             userWin = computer === "Rock" ? false : true;
         }
-
-        console.log("You win (Boolean) :", userWin);
         gameResult(userWin); // 7
     }
 };
@@ -58,7 +53,6 @@ const compMsg = (compChoice) => {
     let compMessage = document.querySelector("#compMsg");
     compMessage.innerText = `Computer chose ${compChoice}`;
     compMessage.classList.add("color2");
-    console.log(compMessage.innerText);
 };
 
 //Computer choice Circle border appears -- 6
@@ -89,8 +83,6 @@ const message = (msg) => {
     let user = document.querySelector("#msg");
     user.innerText = `You chose ${msg}`;
     user.classList.add("color");
-    console.log(user.innerText);
-
     comp(); //3
 };
 
